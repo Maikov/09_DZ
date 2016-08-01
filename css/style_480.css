@@ -1,0 +1,632 @@
+@font-face {
+  font-family: "LeagueGothic-Regular";
+  src: url("../fonts/LeagueGothic-Regular.otf"),
+       url("../fonts/LeagueGothic-Regular.eot");/*для Internet Explorer*/
+}
+
+@font-face {
+  font-family: "OpenSans-Light";
+  src: url("../fonts/2209.ttf"),
+       url("../fonts/2209.eot");/*для Internet Explorer*/
+}
+
+@font-face {
+  font-family: "OpenSans-ExtraBold";
+  src: url("../fonts/OpenSans-ExtraBold.ttf"),
+       url("../fonts/OpenSans-ExtraBold.eot");/*для Internet Explorer*/
+}
+
+@font-face {
+  font-family: "Georgia Italic";
+  src: url("../fonts/Georgia Italic.ttf");
+}
+
+/*----------------480px-----------*/
+
+@media screen and (min-width: 480px) and (max-width: 767px) {
+
+* 
+{
+  margin: 0;
+  padding: 0;
+}
+
+footer, header, menu, nav, section { 
+  display: block;
+}
+
+img, a {
+  border: none;
+}
+
+html {
+  font: 10px Arial, Helvetica, sans-serif;
+}
+
+body {
+  background-color: #f9f9f9;
+}
+ 
+/*----------------HEADER-----------*/
+
+header {
+  height: 548px;
+  background-image: url(../img/background.jpg);
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: initial;
+  background-color: #ececec;
+  border-bottom: 1px solid #33253a; 
+}
+
+.container {
+  width: 480px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.logo {
+  padding: 70px 0 0 0px;
+  text-align: center;
+}
+
+/*----------------TOP GAMBURGER MENU-----------*/
+
+.menu--v {
+  position: absolute;
+  width: 246px;
+  top: 129px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  border: 1px solid transparent;
+  border-radius: 10px;
+  font: 24px/24px "LeagueGothic-Regular", Arial, sans-serif;
+  text-transform: uppercase;
+  color: #fff;
+  z-index: 1;
+}
+
+.menu--v:hover {
+  background-color: rgba(54,41,62, 0.9);
+  filter: progid:DXImageTransform.Microsoft.Alpha(opacity=90);
+  border: 1px solid #051116;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+  filter: progid:DXImageTransform.Microsoft.Alpha(opacity=20);
+}
+
+.menu__item--active {
+  height: 47px;
+  box-sizing: border-box;
+  border-top: 1px solid transparent;
+  border-bottom: 1px solid transparent;
+  border-radius: 10px 10px 0 0;
+  text-align: center;
+}
+
+.menu--v:hover .menu__item--active {
+  border-top: 1px solid #614a6b;
+  border-bottom: 1px solid #36283e;
+}
+
+.menu__item--activ .menu__link, .menu__link-line {
+  padding: 14px 5px 4px 5px;
+  display: inline-block;
+  border-bottom: 2px solid #edbfff;
+  text-decoration: none;
+  color: #fff;
+}
+
+.menu__ul--v .menu__item--submenu {
+  display: none;
+  list-style: none;
+}
+
+.menu__ul--v .menu__item--active {
+   list-style: none;
+}
+
+.menu__ul--v:hover .menu__item--submenu {
+  display: block;
+}
+
+.menu__ul--v .menu__link {
+  display: block;
+  position: relative;
+  height: 42px;
+  padding-top: 9px;
+  box-sizing: border-box;
+  border-top: 1px solid #523e5a;
+  border-bottom: 1px solid #36283e;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  overflow: hidden;
+}
+
+.menu__item--submenu .menu__link:hover {
+  background-color: rgba(0,0,0,0.3);
+  filter: progid:DXImageTransform.Microsoft.Alpha(opacity=30);
+}
+
+.menu__item--submenu .menu__link::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 2px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background-color: #fff;
+  opacity: 0;
+}
+
+.menu__item--submenu .menu__link:hover:after {
+  opacity: 1;
+}
+
+.menu__item--submenu:last-child .menu__link{
+  border-bottom: 0;
+  border-radius: 0 0 10px 10px;
+}
+
+/*----------------SLIDER-----------*/
+
+.slider {
+  width: 100%;
+  margin-top: 92px;
+  height: 246px;
+  box-sizing: border-box;
+  background-color: rgba(0, 0, 0, 0.2);
+  filter: progid:DXImageTransform.Microsoft.Alpha(opacity=20);
+}
+
+.text_box {
+  position: relative;
+  padding: 93px 0 0 31px;
+  width: 45%;
+  display: inline-block;
+  vertical-align: top;  
+}
+
+.h1 {
+  font: 36px/36px "LeagueGothic-Regular", sans-serif;
+  color: #fefefe;
+  letter-spacing: -0.4px;
+}
+
+.h3 {
+  font: 18px/18px "LeagueGothic-Regular", sans-serif;
+  padding-top: 2px;
+  color: #edbfff;
+}
+
+.h3 .text_end {
+  display: none;
+}
+
+.h1, .h3 {
+  text-shadow: 0px 1px 3px #3c343d;
+  filter: progid:DXImageTransform.Microsoft.Shadow(Color=#3c343d, Direction=135, Strength=1);
+}
+
+.description {
+  display: none;
+}
+
+.picture_box {
+  display: inline-block;
+  vertical-align: top;
+  width: 25%;
+  height: auto;
+  box-sizing: border-box;
+  margin: -9px 0 0 6px;
+}
+
+.picture {
+  width: 192px;
+}
+
+/*----------------SLIDER NAV-----------*/
+
+.slider__nav {
+  position: relative;
+  margin: -29px 0 0 195px;
+  font-size: 0;
+}
+
+.slider__nav__item {
+  display: inline-block; 
+  width: 17px;
+  height: 17px;
+  margin-right: 5px;
+  background: rgba(0,0,0,0.3);
+  filter: progid:DXImageTransform.Microsoft.Alpha(opacity=30);
+  border-radius: 50%;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.slider__nav__item--active:before {
+  content: '';
+  position: absolute;
+  left: 3px;
+  top: 3px;
+  width: 11px;
+  height: 11px;
+  background-image: linear-gradient(to top, #d4d4d4 0%, white 100%);
+  border: 1px solid white;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
+  filter: progid:DXImageTransform.Microsoft.Alpha(opacity=80);
+  border-radius: 50%;
+  box-sizing: border-box;
+}
+
+/*----------------ABOUT SECTION-----------*/
+
+.about {
+  position: relative;
+  width: 100%;
+  height: 597px;  
+  background: linear-gradient(to top, #33253a, #745083);
+  border-bottom: 1px solid #1d2f37;
+  box-shadow: 0px 3px 5px #d8d8d8;  
+}
+
+.row {
+  font-size: 0px;
+  padding-top: 75px;
+}
+
+.col_first, .col_second, .col_third  {
+  padding-left: 74px;
+  margin-top: 22px;
+  width: 82%;
+  color: #fff;
+}
+
+.col_first {
+  margin-top: 0px;
+}
+
+.icon_1 {
+  vertical-align: top;
+  position: absolute;
+  margin: 2px 0 0 -52px;
+  background-image: url(../img/sprite.png);
+  background-position: 0px 0px;
+  width: 30px;
+  height: 31px;
+}  
+
+.icon_2 {
+  vertical-align: top;
+  position: absolute;
+  margin: 2px 0 0 -52px;
+  background-image: url(../img/sprite.png);
+  background-position: 0px 0px;
+  width: 33px;
+  height: 29px;
+} 
+
+.icon_3 {
+  vertical-align: top;
+  position: absolute;
+  margin: 2px 0 0 -52px;
+  background-image: url(../img/sprite.png);
+  background-position: 0px 0px;
+  width: 29px;
+  height: 31px;
+} 
+ 
+.col__h2 {
+  font: 24px "LeagueGothic-Regular", sans-serif;
+  text-shadow: 0.5px 1px 1px #14191c;
+  filter: progid:DXImageTransform.Microsoft.Shadow(Color=#14191c, Direction=135, Strength=1);
+}
+
+.col__p  {
+  font: 16px/24px "OpenSans-Light", sans-serif;
+  text-shadow: 0.5px 1px 1px #14191c;
+  filter: progid:DXImageTransform.Microsoft.Shadow(Color=#14191c, Direction=135, Strength=1);
+}
+
+.read_more, .read_more_1 {
+  font: 18px "LeagueGothic-Regular", sans-serif;
+  color: #fff;
+  display: block;
+  text-decoration: none;
+  text-shadow: 2px 2px 1px #000;
+  filter: progid:DXImageTransform.Microsoft.Shadow(Color=#000, Direction=135, Strength=1); 
+  text-align: right;
+  margin: 15px 11px 0 0;
+}
+
+.read_more_1 {
+  text-shadow: 0px 0px 10px #fff;
+  filter: progid:DXImageTransform.Microsoft.Shadow(Color=#fff, Direction=135, Strength=1);
+}
+
+.read_more:hover {
+  font: 18px "LeagueGothic-Regular", sans-serif;
+  color: #fff;
+  display: block;
+  text-shadow: 0px 0px 10px #fff;
+  filter: progid:DXImageTransform.Microsoft.Shadow(Color=#fff, Direction=135, Strength=1);
+}
+
+/*----------------MAIN SECTION-----------*/
+
+.main {
+  background-color: #f9f9f9;
+  height: 1015px;
+  width: 100%;
+  border-top: 1px solid #0d151b;
+  border-bottom: 1px solid #fefefe;
+}
+
+/*----------------MAIN SECTION (1 ROW)-----------*/
+
+.info {
+  background-color: #fff;
+  width: 416px;
+  height: 273px;
+  margin: 68px 0 0 36px;
+  box-shadow: 0px 2px 10px #efefef;
+}
+
+.author {
+  float: left;
+  width: 50px;
+  height: 51px;
+  margin: 19px 14px 0 -25px;
+}
+
+.info__h2 {
+  font: 30px/30px "LeagueGothic-Regular", sans-serif;
+  text-transform: uppercase;
+  color: #454545;
+  padding-top: 28px;
+  letter-spacing: -0.3px;
+}
+
+.lilac {
+  font: 30px/30px "LeagueGothic-Regular", sans-serif;
+  text-transform: uppercase;
+  color: #edbfff;
+  letter-spacing: -0.1px;
+}
+
+.info__p {
+  font: 16px/24px "OpenSans-Light", sans-serif;	
+  color: #454545;
+  padding: 14px 25px 0 37px;
+}
+
+/*----------------MAIN SECTION NAV-----------*/
+
+.info__nav {
+  position: absolute;
+  padding-left: 197px;
+  margin-top: 23px;
+  text-align: left;
+  width: auto;
+  font-size: 0px;
+  display: block;
+}
+
+.info__nav-item {
+  display: inline-block; 
+  width: 19px;
+  height: 19px;
+  margin-right: 2px;
+  border: 1px solid #e6e6e6;
+  box-shadow: 1px 1.7px 0 #fff;
+  background-color: #fff;
+  border-radius: 50%;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.info__nav-item--active:before {
+  content: '';
+  position: absolute;
+  left: 2px;
+  top: 2px;
+  width: 13px;
+  height: 13px;
+  background-image: linear-gradient(to top, #454545 0%, #6a6a6a 100%);
+  border: 1px solid #454545;
+  border-radius: 50%;
+  box-sizing: border-box;
+}
+
+/*----------------MAIN SECTION (2 ROW)-----------*/
+
+.updates {
+  width: 324px;
+  margin: 86px 0 0 75px;
+  vertical-align: top;
+  display: inline-block;
+}
+
+.updates__h2 {
+  font: 30px "LeagueGothic-Regular", sans-serif;
+  color: #454545;
+  text-shadow: -1px 1px 1px #a5a5a5;
+  filter: progid:DXImageTransform.Microsoft.Shadow(Color=#a5a5a5, Direction=135, Strength=1);
+}
+
+.line {
+  margin-bottom: 10px;
+  height: 100%;
+}
+
+.updimg {
+  float: left;
+  margin-top: 11px;
+}
+
+.link_1 {
+  padding: 16px 0 0 66px;
+  text-decoration: none;
+  font: 16px "OpenSans-ExtraBold", sans-serif;
+  color: #454545;
+  display: block;
+  text-align: left;
+  text-shadow: 0px 1px 1px #a5a5a5;
+  filter: progid:DXImageTransform.Microsoft.Shadow(Color=#a5a5a5, Direction=135, Strength=1); 
+}
+
+.updates__p {
+  font: 16px "OpenSans-Light", sans-serif;
+  color: #454545;
+  padding: 3px 0 0 66px;
+}
+
+.updates__p .text_end {
+  display: none;
+}
+
+.read_more_2 {
+  font: 18px "LeagueGothic-Regular", sans-serif;
+  color: #454545;
+  display: block;
+  text-decoration: none;
+  text-shadow: -1px 1px 1px #a5a5a5;
+  filter: progid:DXImageTransform.Microsoft.Shadow(Color=#a5a5a5, Direction=135, Strength=1); 
+  text-align: right;
+  margin-top: 16px;
+}
+
+/*----------------LOGOS LINE-----------*/
+
+.logos {
+  height: 236px;
+  width: 100%;
+  margin-top: 88px;
+  border-top: 1px solid #e6e6e6;
+  border-bottom: 1px solid #fefefe;
+}
+
+.logos__line_2 {
+  padding-top: 36px;
+  width: 345px;
+  height: 154px;
+  display: block;
+  margin: 0 auto;
+}
+
+.logos__line {
+  display: none;
+}
+
+/*----------------ARTICLES SECTION-----------*/
+
+.articles {
+  background-color: #ececec;
+  height: 670px;
+  width: 100%;
+  border-top: 1px solid #d8d8d8;
+  border-bottom: 1px solid #fefefe;
+}
+
+.row_2 {
+  font-size: 0px;
+  padding-top: 23px;
+  margin-left: 10px;
+  width: 100%;
+}
+
+.art, .art3 {
+  vertical-align: top;
+  width: 91.67%;
+  height: 126px;
+}
+
+.art, .art3 {
+  margin-top: 61px;
+}
+
+.art .text_end, .art3 .text_end  {
+  display: none;
+}
+
+.art__1, .art__2, .art__3, .end {
+  font: 24px/16px "LeagueGothic-Regular", sans-serif;
+  color: #454545;
+  text-shadow: 0px 1px 1px #fff;
+  filter: progid:DXImageTransform.Microsoft.Shadow(Color=#fff, Direction=135, Strength=1);
+}
+
+.end {
+  color: #b9b9b9;
+}
+
+.art__p, .art__p3 {
+  font: 16px/24px "OpenSans-Light", sans-serif;
+  color: #787878;
+  word-break: break-all;
+  text-shadow: 0px 1px 1px #fff;
+  filter: progid:DXImageTransform.Microsoft.Shadow(Color=#fff, Direction=135, Strength=1);
+  padding-top: 14px;
+}
+
+/*----------------FOOTER-----------*/
+
+footer {
+  height: 201px;
+  background-image: url(../img/bgfooter.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  box-shadow: 0px 3px 10px #47464f inset;
+}
+
+/*----------------MENU DOWN-----------*/
+
+.footer_menu {
+  width: 98%;
+  margin-left: 13px;
+  padding-top: 43px;
+}
+
+.footer_menu__item {
+  font-family: "LeagueGothic-Regular", sans-serif;
+  text-transform: uppercase;
+  list-style: none;
+  display: inline-block;
+  font-size: 20px;
+  padding: 0 11px 0 11px;
+  text-shadow: 2px 2px 1px #4b494e;
+  filter: progid:DXImageTransform.Microsoft.Shadow(Color=#4b494e, Direction=135, Strength=1);
+}
+
+.footer_menu__item:first-child {
+  padding-left: 0px;
+}
+
+.footer_menu__link {
+  color: #ffffff;
+  display: block;
+  text-decoration: none;
+  height: 100%;
+}
+
+/*----------------DESIGN BY LINE-----------*/
+
+.designe {
+  width: 32%; 
+  margin: 27px 0 0 156px;
+  text-align: center;
+}
+
+.by {
+  font: 12px/28px "OpenSans-Light", sans-serif;
+  color: #fff;
+}
+
+.copy {
+  font: 12px/28px "OpenSans-ExtraBold", sans-serif;
+  color: #fff;
+}
+}
